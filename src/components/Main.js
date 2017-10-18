@@ -1,17 +1,20 @@
 import React, { PureComponent } from 'react'
+import {reduxForm, FieldArray} from 'redux-form'
 
-export default class Main extends PureComponent {
-  onChange = ({target: {name, value}}) => {
-    if (!isNaN(value)) {
-      this.setState({[name]: value});
-    }
-  };
+import ContactsList from './ContactsList'
 
+export class Main extends PureComponent {
   render() {
     return (
       <div>
-        Contacts app
+        <form>
+          <FieldArray name='contacts' component={ContactsList} />
+        </form>
       </div>
     )
   }
 }
+
+export default reduxForm({
+  form: 'contactsForm',
+})(Main)
