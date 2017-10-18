@@ -35,10 +35,15 @@ export default class componentName extends Component {
           type='email'
           label='Email'
         />
-        <div className='col-md-3 btn-group' role="group" >
-          <div className='btn btn-danger btn-sm' onClick={this.removeContact}>Remove</div>
-          <div className='btn btn-success btn-sm' onClick={this.saveContact}>Save</div>
-          <div className='btn btn-dark btn-sm' onClick={this.editContact}>Edit</div>
+        <Field
+          name={`contacts[${index}].address`}
+          component={contactInput}
+          label='Address'
+      />
+        <div className='col-md-2 btn-group' role="group" >
+          <div className='btn btn-danger' onClick={this.removeContact}>Remove</div>
+          <div className='btn btn-success' onClick={this.saveContact}>Save</div>
+          <div className='btn btn-dark' onClick={this.editContact}>Edit</div>
         </div>
       </div>
     )
@@ -48,7 +53,7 @@ export default class componentName extends Component {
 
 const contactInput = (props) => {
   return (
-    <div className='col-md-3' data-label={props.label}>
+    <div className='col-md-2' data-label={props.label}>
       <input {...props.input} placeholder={props.label} className='input' />
     </div>
   )

@@ -6,7 +6,7 @@ import ContactsList from './ContactsList'
 export class Main extends PureComponent {
   render() {
     return (
-      <div>
+      <div className='container-fluid'>
         <form>
           <FieldArray name='contacts' component={ContactsList} />
         </form>
