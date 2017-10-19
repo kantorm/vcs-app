@@ -42,8 +42,6 @@ export default class componentName extends Component {
       />
         <div className='col-md-2 btn-group' role="group" >
           <div className='btn btn-danger' onClick={this.removeContact}>Remove</div>
-          <div className='btn btn-success' onClick={this.saveContact}>Save</div>
-          <div className='btn btn-dark' onClick={this.editContact}>Edit</div>
         </div>
       </div>
     )
