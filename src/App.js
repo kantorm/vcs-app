@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import logo from './assets/logo.svg';
 import './assets/App.css';
 import store from './store';
-import Main from './components/Main';
+import ContactsForm from './components/ContactsForm';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Contacts App</h1>
           </header>
-          <Main />
+          <ContactsForm />
         </div>
       </Provider>
       );
