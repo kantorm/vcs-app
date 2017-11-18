@@ -13,7 +13,7 @@ export default class ContactsList extends Component {
     const {fields} = this.props;
     return (
       <div>
-        {fields.map((contact, index) => <ContactLine index={index} fields={fields} key={contact} />)}
+        {fields.map((contact, index) => <ContactLine index={index} fields={fields} key={contact} handleSubmit={this.props.handleSubmit}/>)}
       </div>
     )
   }
