@@ -10,7 +10,9 @@ export class ContactsForm extends PureComponent {
   }
 
   componentWillMount = () => {
-    let contacts = JSON.parse(localStorage.getItem('contacts')).contacts;
+    const storage = JSON.parse(localStorage.getItem('contacts'))
+    let contacts = []
+    if (storage) contacts = storage.contacts
     contacts = contacts.map((contact) => ({ ...contact, loadedFromStorage: true }))
     this.props.initialize({contacts});
   }
