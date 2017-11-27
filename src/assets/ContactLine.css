@@ -11,7 +11,8 @@
 }
 
 input:focus {
-  border-bottom-color: #40b8c2
+  border-bottom-color: #40b8c2;
+  outline: none;
 }
 
 .row {
